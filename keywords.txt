@@ -41,7 +41,7 @@ Active			KEYWORD2
 
 Mode			KEYWORD2
 Check_WakeUp_Sleep	KEYWORD2
-Live			KEYWORD2
+Living			KEYWORD2
 To_Normal_Idle		KEYWORD2
 
 #######################################

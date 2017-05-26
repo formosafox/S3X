@@ -18,7 +18,7 @@ SysMode::SysMode(unsigned long IdleTime) {
 // SysMode：解構
 SysMode::~SysMode(void){/*nothing to destruct*/}
 // ************************************************************************
-// ************************************************************************
+// 檢查 doWakeUp、doSleep 模式
 byte SysMode::Check_WakeUp_Sleep(void) {
   switch (_Mode) {
     case SysMode_Idle     :
@@ -35,7 +35,8 @@ byte SysMode::Check_WakeUp_Sleep(void) {
   return(_Mode);
 }
 // ************************************************************************
-void SysMode::Live(void) {
+// 活動中
+void SysMode::Living(void) {
   switch (_Mode) {
     case SysMode_Idle     :
         LiveTime = millis();
@@ -50,6 +51,7 @@ void SysMode::Live(void) {
   }
 }
 // ************************************************************************
+// 由 doWakeUp->Normal 或 doSleep-> Idle
 void SysMode::To_Normal_Idle(void) {
   switch (_Mode) {
     case SysMode_Idle     :
